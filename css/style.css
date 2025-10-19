@@ -1,0 +1,334 @@
+:root{
+    --text-color:#000000;
+    --link-color: #28511c;
+    --background-color: #c9d1e1;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: var(--background-color);
+}
+
+a{
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+/*----NAVBAR-----*/
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    height: 80px;
+}
+
+
+nav .left a{
+    color: var(--text-color);
+    font-size: 22px;
+    font-weight: 600;
+
+}
+
+
+nav .right a{
+    color: var(--text-color);
+    margin: 0 10px;
+
+}
+
+nav .right a:last-child {
+    color:var(--background-color);
+    background-color: var(--text-color);
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+nav .right a span {
+   margin-left: 5px;
+}
+
+/*Who I AM*/
+
+.WhoIAM{
+   display: flex;
+   justify-content:space-between;
+   align-items: center;
+   padding: 0 50px;
+   margin: 50px 0;
+   gap:40px;
+   margin-bottom: 100px; 
+}
+
+.WhoIAM .text{
+    flex: 5;
+}
+
+.WhoIAM .text h2{
+    font-size: 45px;
+}
+
+.WhoIAM .text .links{
+    margin-top: 25px;
+}
+
+.WhoIAM .text .links a{
+    display: inline-block;
+    padding: 5px 10px;
+    border:2px solid var(--link-color);
+    border-radius: 5px;
+    transition: .1s;
+}
+
+
+.WhoIAM .headshots {
+    flex:2;
+    display: flex;
+    justify-content: right;
+
+}
+
+
+.WhoIAM .text .links a:hover {
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+}
+
+.WhoIAM .headshots img {
+    width: 300px;
+    border-radius: 50%;
+}
+
+@media (max-width: 850px) {
+    .WhoIAM .text h2 {
+        font-size: 35px;
+    }
+}
+@media (max-width: 740px) {
+    .WhoIAM  {
+        flex-direction: column-reverse;
+    }
+
+    .WhoIAM .headshots img{
+        width: 300px;
+
+    }
+}
+
+
+@media (max-width: 600px) {
+    nav{
+        padding: 0 20px;
+    }
+
+    nav .right a{
+        font-size: 22px;
+    }
+
+    nav .right a:last-child{
+        color: var(--text-color);
+        background-color: transparent;
+        padding: 0;
+    }
+
+
+    nav .right a span {
+        display: none;
+    }
+}
+
+/* Skills */
+.skills-section {
+    font-family: 'Inter', sans-serif;
+    margin: 50px 20px;
+    text-align: center;
+}
+
+.skills-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+
+
+/* Horizontal row of icons */
+.skills-row {
+    display: flex;
+    justify-content: center; /* center the row */
+    gap: 40px;
+    flex-wrap: wrap; /* wrap on smaller screens */
+}
+
+/* Each icon block */
+.skills-row details {
+    width: 140px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Remove default arrows */
+.skills-row summary {
+    list-style: none;
+}
+
+.skills-row summary::-webkit-details-marker {
+    display: none;   /* Chrome, Safari, Edge */
+}
+
+.skills-row summary::marker {
+    display: none;   /* Firefox */
+}
+
+/* Dropdown box */
+.skills-row details ul {
+    margin-top: 10px;
+    padding: 12px;
+    background-color: #f9f9f9;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    list-style: none;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+/* Dropdown list items */
+.skills-row details li {
+    margin: 5px 0;
+}
+
+/* Optional: icon hover effect */
+.skills-row summary i {
+    transition: transform 0.2s, color 0.2s;
+}
+
+.skills-row summary:hover i {
+    transform: scale(1.1);
+    color: #0077cc;
+}
+/*END SKILLS */
+
+
+
+/*Education*/
+.education-section{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin: 50px 20px;
+}
+
+.education-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.edu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.edu-box {
+    width: 400px;
+    background-color: #ffffff;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Remove default arrow */
+.edu-box summary::-webkit-details-marker {
+    display: none;
+}
+
+.edu-box summary::marker {
+    display: none;
+}
+
+/* Style the title */
+.edu-box summary {
+    font-size: 1.25rem;
+    font-weight: 600;
+    outline: none; /* remove focus border on click */
+}
+
+/* Dropdown content */
+.edu-box ul {
+    margin-top: 10px;
+    padding-left: 0;
+    list-style: none;
+    text-align: left;
+}
+
+.edu-box li {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Contact  */
+.contact-section{
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.contact-section h2{
+    font-size: 35px;
+}
+.contact-section .group{
+    display: flex;
+    gap: 50px;
+}
+
+.contact-section .group .text {
+    flex: 3;
+}
+
+
+.contact-section .group form {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-section .group form input,
+.contact-section .group form textarea {
+    font-family: 'Times New Roman', Times, serif;
+    border: 2px solid rgb(0, 0, 0);
+    background-color: transparent;
+    padding: 10px;
+    margin-bottom: 15px;
+    outline: none;
+    resize: none;
+}
+
+.contact-section .group form button {
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #000000;
+    background-color:var(--link-color);
+    border: none;
+    height: 50px;
+    cursor: pointer;
+}
+
+.contact-section .group form button:hover{
+    filter: brightness(.9);
+}
